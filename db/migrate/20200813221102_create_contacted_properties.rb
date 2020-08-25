@@ -4,7 +4,7 @@ class CreateContactedProperties < ActiveRecord::Migration[6.0]
       t.belongs_to :user
       t.belongs_to :property
 
-      t.integer :contacted
+      t.integer :contacted, default: 0
 
       t.timestamps
     end

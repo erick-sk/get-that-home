@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_221844) do
   create_table "contacted_properties", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "property_id"
-    t.integer "contacted"
+    t.integer "contacted", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["property_id"], name: "index_contacted_properties_on_property_id"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_221844) do
   create_table "favorited_properties", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "property_id"
-    t.integer "favorited"
+    t.integer "favorited", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["property_id"], name: "index_favorited_properties_on_property_id"
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_221844) do
   create_table "seen_properties", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "property_id"
-    t.integer "seen"
+    t.integer "seen", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["property_id"], name: "index_seen_properties_on_property_id"

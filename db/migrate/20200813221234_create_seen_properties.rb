@@ -4,7 +4,7 @@ class CreateSeenProperties < ActiveRecord::Migration[6.0]
       t.belongs_to :user
       t.belongs_to :property
       
-      t.integer :seen
+      t.integer :seen, default: 0
 
       t.timestamps
     end

@@ -4,7 +4,7 @@ class CreateFavoritedProperties < ActiveRecord::Migration[6.0]
       t.belongs_to :user
       t.belongs_to :property
       
-      t.integer :favorited
+      t.integer :favorited, default: 0
 
       t.timestamps
     end
