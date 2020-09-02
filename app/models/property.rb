@@ -1,5 +1,6 @@
 class Property < ApplicationRecord
-  belongs_to :user
+  belongs_to :owner, class_name: "User"
+
 
   has_many :contacted_properties
   has_many :users, :through => :contacted_properties 

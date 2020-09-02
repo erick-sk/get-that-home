@@ -15,7 +15,6 @@ class CreateProperties < ActiveRecord::Migration[6.0]
       t.float :bathrooms
       t.integer :type  
       t.boolean :closed
-      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
